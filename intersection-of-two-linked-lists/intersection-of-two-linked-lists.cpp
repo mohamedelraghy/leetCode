@@ -20,7 +20,6 @@ public:
                 tempA = tempA->next;    
             }
             
-            
             tempB = tempB->next;
         }
         return NULL;
