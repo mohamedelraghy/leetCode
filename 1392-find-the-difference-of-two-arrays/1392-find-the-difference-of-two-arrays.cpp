@@ -19,13 +19,9 @@ class Solution {
 public:
     
     vector<vector<int>> findDifference(vector<int>& nums1, vector<int>& nums2) {
-      vector<int> ans1, ans2;
-      ans1 = findDistinct(nums1, nums2);
-      ans2 = findDistinct(nums2, nums1);
-      
-      vector<vector<int>> ans;
-      ans.push_back(ans1);
-      ans.push_back(ans2);
-      return ans;
+      return {
+        findDistinct(nums1, nums2), 
+        findDistinct(nums2, nums1)
+      };
     }
 };
