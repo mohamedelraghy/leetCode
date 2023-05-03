@@ -11,9 +11,8 @@ class Solution {
       }
       if(flag) ans.insert(nums1[i]);
     }
-    vector<int> Vans;
-    Vans.assign(ans.begin(), ans.end());
-    return Vans;
+    
+    return vector<int> (ans.begin(), ans.end());
   }
 
 public:
