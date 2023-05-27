@@ -4,16 +4,12 @@
  * @return {Array[]}
  */
 var chunk = function(arr, size) {
-  let ans = [];
+  const ans = [];
   let index = 0;
+
   while(index < arr.length) {
-    let count = size;
-    const temp = [];
-    while (count-- > 0 && index < arr.length) {
-      temp.push(arr[index]);
-      index++;
-    }
-    ans.push(temp);
+    ans.push(arr.slice(index, index + size));
+    index += size;
   }
-  return ans
+  return ans;
 };
